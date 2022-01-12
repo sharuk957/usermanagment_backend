@@ -11,6 +11,6 @@ router.register('accounts', views.UserManagmentView, basename="accounts")
 urlpatterns = [
     path('',include(router.urls)),
     path('login',views.LoginView.as_view(),name="login"),
-    path('registration',views.UserRegistrationView.as_view(),name="registration"),
+    path('registration/',views.UserRegistrationView.as_view(),name="registration"),
 
 ]

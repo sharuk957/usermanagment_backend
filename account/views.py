@@ -21,6 +21,9 @@ class UserRegistrationView(CreateAPIView):
     parser_classes = [parsers.MultiPartParser,parsers.FormParser]
 
 
+
+
+
 class UserManagmentView(viewsets.ModelViewSet):
 
     queryset = MyUser.objects.all()
@@ -29,6 +32,9 @@ class UserManagmentView(viewsets.ModelViewSet):
     http_method_names = ['get','patch','delete']
     authentication_classes =  [JWTAuthentication]
     permission_classes     =  [IsAuthenticated]
+
+
+
 
 class LoginView(APIView):
 
